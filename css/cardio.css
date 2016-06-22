@@ -50,6 +50,7 @@ p {
 	font-size: 18px;
 	line-height: 1.5;
 	color: #8a8e91;
+	padding-left: 30px;
 }
 
 h1,
@@ -279,6 +280,10 @@ section {
 	background: #fff;
 }
 
+section h2 {
+	color: #dd5042;
+}
+
 .section-padded {
 	padding: 140px 0 40px;
 }
@@ -482,7 +487,8 @@ section {
 }
 
 .service .icon-holder > img.icon {
-	width: 40px;
+	width: 46px;
+	height: 40px;
 }
 
 .service:hover {
@@ -707,6 +713,7 @@ footer .bottom-footer {
 footer .social-footer {
 	padding: 0;
 	list-style: none;
+	padding-right: 100px;
 }
 
 footer .social-footer li {

@@ -714,23 +714,23 @@ footer .bottom-footer {
 	margin-top: 150px;
 }
 
-footer .social-footer {
+.social-footer {
 	padding: 0;
 	list-style: none;
 	padding-right: 100px;
 }
 
-footer .social-footer li {
+.social-footer li {
 	display: inline-block;
 	margin: 0 10px;
 }
 
-footer .social-footer li a {
+.social-footer li a {
 	font-size: 24px;
-	color: #fff;
+	color: #8a8e91;
 }
 
-footer .social-footer li:hover a {
+.social-footer li:hover a {
 	color: #dd5042;
 }
 /* Form Control */
@@ -1073,6 +1073,53 @@ footer .social-footer li:hover a {
 		text-align: center !important;
 		margin-bottom: 30px;
 	}
+	nav.navbar-fixed-top {
+		z-index: 9499;
+		top: -100;
+		padding: 0px 0;
+		opacity: 0;
+		background: white;
+		box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.05);
+	}
+
+	#doctor {
+		position: relative;
+		z-index: 1;
+		padding-top: 80px;
+	}
+
+	#patient {
+		position: relative;
+		z-index: 1;
+		padding-top: 80px;
+	}
+
+	#healthlab {
+		position: relative;
+		z-index: 1;
+		padding-top: 80px;
+	}
+
+	#pharma {
+		position: relative;
+		z-index: 1;
+		padding-top: 80px;
+	}
+
+	.service .description {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+
+	.service .icon-holder {
+		top: -30px;
+	}
+
+	.service .heading {
+		top: -30px;
+	}
 }
 
 @media(max-width: 768px) {
@@ -1111,6 +1158,54 @@ footer .social-footer li:hover a {
 		position: relative;
 		padding-right: 30px;
 		padding-left: 30px;
+	}
+
+	nav.navbar-fixed-top {
+		z-index: 9499;
+		top: -100;
+		padding: 0px 0;
+		opacity: 0;
+		background: white;
+		box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.05);
+	}
+
+	#doctor {
+		position: relative;
+		z-index: 1;
+		padding-top: 80px;
+	}
+
+	#patient {
+		position: relative;
+		z-index: 1;
+		padding-top: 80px;
+	}
+
+	#healthlab {
+		position: relative;
+		z-index: 1;
+		padding-top: 80px;
+	}
+
+	#pharma {
+		position: relative;
+		z-index: 1;
+		padding-top: 80px;
+	}
+
+	.service .description {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+
+	.service .icon-holder {
+		top: -30px;
+	}
+
+	.service .heading {
+		top: -30px;
 	}
 }
 

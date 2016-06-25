@@ -214,8 +214,6 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 
 .btn.btn-blue {
 	background: #dd5042;
-	margin-top: 20px;
-	margin-left: -10px;
 }
 
 .btn.btn-blue:hover {
@@ -484,6 +482,29 @@ section h2 {
 	transition: all 0.3s ease;
 }
 
+.cursor--default{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
 .service .heading {
 	position: relative;
 	top: 80px;
@@ -492,7 +513,6 @@ section h2 {
 }
 
 .service .icon-holder > img.icon {
-	width: 46px;
 	height: 40px;
 }
 
@@ -537,7 +557,7 @@ section h2 {
 	height: 250px;
 	padding-top: 60px;
 	opacity: 0;
-	background: rgba(113, 133, 144, 0.9);
+	background: rgba(152, 157, 160, 0.9);
 	-webkit-transition: opacity 0.45s ease;
 	transition: opacity 0.45s ease;
 }

@@ -1,6 +1,98 @@
 jQuery(function($) {
 	"use strict";
 	// Author Code Here
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var texts = ['doctors', 'patients', 'pharmacies', 'health labs'];
+
+var TypeWritter = function () {
+  function TypeWritter(elem, texts, cursor) {
+    _classCallCheck(this, TypeWritter);
+
+    this.elem = elem;
+    this.texts = texts;
+    this.cursor = cursor;
+    this.currText = '';
+    this.stack = new Array();
+    this.getText = this.getText.bind(this);
+    this.write = this.write.bind(this);
+    this.getSubString = this.getSubString.bind(this);
+    this.cursor = document.createElement('span');
+    this.cursor.innerHTML = "|";
+    this.cursor.setAttribute("class", "cursor--default");
+  }
+
+  TypeWritter.prototype.init = function init(delay, loop) {
+    var self = this;
+    var getText = this.getText;
+    var write = this.write;
+    var maxlength = this.texts.length;
+    var currText = this.currText;
+    var i = 0;
+
+    function getNewText() {
+      if (i < maxlength) {
+        currText = getText(i);
+        write(currText);
+      } else {
+        if (loop) {
+          i = 0;
+          currText = getText(i);
+          write(currText);
+        } else {
+          clearInterval(self.getNewText);
+        }
+      }
+      i++;
+      setTimeout(function () {
+        requestAnimationFrame(getNewText);
+      }, delay);
+    }
+    getNewText();
+  };
+
+  TypeWritter.prototype.getText = function getText(arrayPos) {
+    return this.texts[arrayPos];
+  };
+
+  TypeWritter.prototype.write = function write(text) {
+    var _this = this;
+
+    var self = this;
+    var elem = document.getElementById(this.elem);
+    var textlen = text.length;
+    var getSubString = this.getSubString;
+    var j = 0;
+
+    function writeInterval() {}
+    self.writeInterval = setInterval(function () {
+      if (j < textlen) {
+        var text2write = getSubString(text, j);
+        elem.innerHTML = text2write;
+        elem.appendChild(_this.cursor);
+      } else {
+        _this.stack.splice(0, _this.stack.length);
+        clearInterval(self.writeInterval);
+      }
+      j++;
+    }, 100);
+  };
+
+  TypeWritter.prototype.getSubString = function getSubString(text, index) {
+    this.stack.push(text[index]);
+    return this.stack.join('');
+  };
+
+  return TypeWritter;
+}();
+
+;
+
+var type = new TypeWritter('chng', texts, '');
+type.init(3000, true);
+
+var type = new TypeWritter('chng', texts, '');
+type.init(3000, true);
 
 	var owlPricing;
 	var ratio = 2;

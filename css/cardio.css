@@ -1096,7 +1096,6 @@ footer .bottom-footer {
 	}
 	nav.navbar-fixed-top {
 		z-index: 9499;
-		top: -100;
 		padding: 0px 0;
 		opacity: 0;
 		background: white;
@@ -1183,7 +1182,6 @@ footer .bottom-footer {
 
 	nav.navbar-fixed-top {
 		z-index: 9499;
-		top: -100;
 		padding: 0px 0;
 		opacity: 0;
 		background: white;
@@ -1239,7 +1237,6 @@ footer .bottom-footer {
 	}
 	nav.navbar-fixed-top {
 		z-index: 9499;
-		top: -100;
 		padding: 0px 0;
 		opacity: 0;
 		background: white;

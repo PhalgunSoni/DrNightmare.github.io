@@ -3,7 +3,7 @@ jQuery(function($) {
 	// Author Code Here
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var texts = ['doctors', 'patients', 'pharmacies', 'health labs'];
+var texts = ['patients', 'doctors', 'pharmacies', 'health labs'];
 
 var TypeWritter = function () {
   function TypeWritter(elem, texts, cursor) {
